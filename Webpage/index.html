@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AI-Lawyer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      a {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="banner">
+      <img src="images/icons8-law-100.png" class="logo" />
+      <div class="menu">
+        <ul>
+          <li class="active">
+            <a href="#">Find a Lawyer</a>
+            <div class="sub1">
+              <ul>
+                <li class="active">
+                  <a href="http://127.0.0.1:5500/location.html">By Location</a>
+                </li>
+                <li class="active"><a href="#">By Legal Issue</a></li>
+                <li class="active"><a href="#">By Lawyer Profiles</a></li>
+                <li class="active"><a href="#">By Name</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="active">
+            <a href="#">Legal Services</a>
+            <div class="sub1">
+              <ul>
+                <li class="active"><a href="#">Will / Testament</a></li>
+                <li class="active"><a href="#">Healthcare Insurance</a></li>
+                <li class="active">
+                  <a href="#">Financial Power of Attorny</a>
+                </li>
+                <li class="active"><a href="#">LLC</a></li>
+                <li class="active"><a href="#">Corporation</a></li>
+                <li class="active"><a href="#">Nonprofit</a></li>
+                <li class="active"><a href="#">DBA</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="active">
+            <a href="#">Learn About the Law</a>
+            <div class="sub1">
+              <ul>
+                <li class="active"><a href="#">About Law</a></li>
+                <li class="active">
+                  <a href="#">Accidents</a>
+                </li>
+                <li class="active">
+                  <a href="#">Bankruptcy</a>
+                </li>
+                <li class="active"><a href="#">Consumer Protection</a></li>
+                <li class="active"><a href="#">Employment</a></li>
+                <li class="active"><a href="#">Real Estate</a></li>
+                <li class="active"><a href="#">Immigration</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="active">
+            <a href="#">Types of Law</a>
+            <div class="sub1">
+              <ul>
+                <li class="active"><a href="#">Administrative Law</a></li>
+                <li class="active">
+                  <a href="#">Constitutional Law</a>
+                </li>
+                <li class="active"><a href="#">Consumer Law</a></li>
+                <li class="active"><a href="#">Contract Law</a></li>
+                <li class="active"><a href="#">Criminal Law</a></li>
+                <li class="active"><a href="#">Family Law</a></li>
+                <li class="active"><a href="#">Tort Law</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="active">
+            <a href="#">Contact Us</a>
+            <div class="sub1">
+              <ul>
+                <li class="active"><a href="#">Our Team</a></li>
+                <li class="active"><a href="#">Accessibility</a></li>
+                <li class="active"><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="banner-text">
+        <h1>AI-Lawyer</h1>
+        <p>
+          The world's first site for acquiring a lawyer online. <br />
+          Solution to all of your legal queries.
+        </p>
+      </div>
+    </section>
+    <section id="about">
+      <div class="intro-box">
+        <div class="intro">
+          <h1>What are we?</h1>
+          <p>
+            Are you facing a legal issue, or just looking for more information
+            about a specific legal matter? Then this is the perfect starting
+            point for you. <br />
+            We have informational articles about a wide variety of legal topics,
+            as well as specific information about subjects such as how to hire
+            an attorney.
+          </p>
+        </div>
+        <img src="images/istockphoto-1086341762-612x612.jpg" alt="" />
+      </div>
+    </section>
+    <section id="topics">
+      <div class="topics">
+        <div class="intro-2">
+          <h1>Other Legal Topics</h1>
+          <p>
+            - Your Guide to Hiring a Lawyer <br />
+            - Car Accidents <br />
+            - Consumer Protection <br />
+            - Estate Planning <br />
+            - Voting
+          </p>
+        </div>
+        <img src="images/gettyimages-1075443336-612x612.jpg" alt="" />
+      </div>
+    </section>
+    <div class="container">
+      <form onsubmit="sendEmail(); reset(); return false;">
+        <h2>Get in Touch!</h2>
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Email id" required />
+        <input type="text" id="phone" placeholder="Phone no#" required />
+        <textarea
+          name="message"
+          rows="4"
+          placeholder="How can we help?"
+        ></textarea>
+        <button type="Submit">Submit</button>
+      </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail() {
+        Email.send({
+          Host: "smtp.gmail.com",
+          From: document.getElementById("email").value,
+          Subject: "New Form",
+          Body: "And this is the body",
+        }).then((message) => alert(message));
+      }
+    </script>
+    <section id="footer">
+      <div class="title">
+        <h1>AI-Lawyer</h1>
+        <p>Keep your Law knowledge up-to-date.</p>
+        <div class="official">
+          <a href="https://pakistancode.gov.pk/" target="_blank"
+            ><p>Visit The official goverment website for further details.</p></a
+          >
+        </div>
+      </div>
+      <div class="socials">
+        <a href="https://www.facebook.com/login/" target="_blank"
+          ><i class="fa fa-facebook"></i
+        ></a>
+        <a href="https://twitter.com/i/flow/login" target="_blank"
+          ><i class="fa fa-twitter"></i
+        ></a>
+        <a href="https://www.instagram.com/accounts/login/" target="_blank"
+          ><i class="fa fa-instagram"></i
+        ></a>
+      </div>
+    </section>
+  </body>
+</html>
